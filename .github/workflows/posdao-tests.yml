@@ -50,6 +50,7 @@ jobs:
       with:
         repository: NethermindEth/nethermind
         path: nethermind
+        submodules: true
     - run: |
         ls -a
         cd nethermind
