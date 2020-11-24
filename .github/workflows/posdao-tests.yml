@@ -51,7 +51,10 @@ jobs:
         repository: NethermindEth/nethermind
         path: nethermind
     - run: |
+        ls -a
         cd nethermind
+        pwd
+        ls -a
         git submodule update --init src/rocksdb-sharp src/int256 src/Dirichlet
     - name: Cloning posdao-test-setup repo from Nethermind
       uses: actions/checkout@v2
