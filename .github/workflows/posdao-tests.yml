@@ -46,6 +46,9 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get -y install libsnappy-dev libc6-dev libc6
+        sudo add-apt-repository ppa:git-core/ppa
+        sudo apt-get update
+        sudo apt-get install git
     - name: Cloning Nethermind repo
       uses: actions/checkout@v2
       with:
