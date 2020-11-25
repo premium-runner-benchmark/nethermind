@@ -20,9 +20,10 @@ jobs:
   posdao-tests:
     name: Nethermind POSDAO Tests
     runs-on: ${{ matrix.runner_type }}
+    continue-on-error: true
     strategy:
       matrix:
-        runner_type: [ds2v2,ds2v3,ds3v2,ds4v2,ds5v2,f32s,f64s,m5large,n2s2,ubuntu-20.04]        
+        runner_type: [ds2v2,ds2v3,d2dsv4,d2asv4,m5large,n2s2,ds3v2,ds4v2,ds5v2,f4s,c2s4,c5xlarge,f32s,f64s,ubuntu-latest,f2s,f8s,f16s]        
     env:
       runId: ${{ matrix.runner_type }}-${{ github.workflow }}
       artifactsDir: artifacts/${{ github.repository }}
